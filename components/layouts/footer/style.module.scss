@@ -1,0 +1,71 @@
+@import "../../../public/styles/partials/config";
+
+.footerMain {
+  background-color: color(primary-blue);
+  padding: 6rem 0 0;
+  color: color(primary-white);
+
+  .footSocial {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      color: color(primary-white);
+      margin-right: 0.6rem;
+
+      &.twitter {
+        background-color: color(twitter);
+      }
+      &.facebook {
+        background-color: color(facebook);
+      }
+      &.youtube {
+        background-color: color(youtube);
+      }
+      &.doribble {
+        background-color: color(doribble);
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: 1rem;
+    font-size: text(lg);
+    font-weight: 600;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      list-style-type: none;
+      a {
+        color: rgba(color(primary-white), 0.7);
+        display: block;
+        margin: 0.5rem 0;
+        transition: all 0.3s;
+
+        &:hover {
+          color: color(primary-white);
+        }
+      }
+    }
+  }
+
+  .copyRight {
+    border-top: 0.063rem solid color(light-blue);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 6rem;
+    color: rgba(color(primary-white), 0.7);
+    span {
+      opacity: 0.5;
+    }
+  }
+}

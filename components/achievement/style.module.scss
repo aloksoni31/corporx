@@ -1,0 +1,31 @@
+@import "../../public/styles/partials/config";
+
+.achievementMain {
+  background: url("../../public/images/slider-img-5.jpg") no-repeat center center fixed;
+  position: relative;
+
+  .achievementBox {
+    padding: 4rem 0;
+    background: linear-gradient(
+      85deg,
+      rgba(color(primary-blue), 0.8) 30%,
+      rgba(color(primary-pink), 0.9) 100%
+    );
+
+    .achievementCols {
+      color: color(primary-white);
+      text-align: center;
+
+      .achievementIcon {
+        margin-bottom: 1rem;
+      }
+      .achievementNumber {
+        font-size: text(xxl);
+        font-weight: 600;
+      }
+      .achievementTitle {
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@import "../../public/styles/partials/config";
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100dvh;
+    background: linear-gradient(
+      85deg,
+      rgba(color(primary-blue), 0.8) 30%,
+      rgba(color(primary-pink), 0.9) 100%
+    );
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  video {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bannerFigure {
+    text-align: center;
+    width: 100%;
+    max-width: 60%;
+    margin: auto;
+    color: color(primary-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    h1 {
+      font-size: text(h1-heading);
+      font-weight: 700;
+    }
+    p {
+      font-size: text(lg);
+      margin: 1rem 0;
+    }
+
+    .counterCols {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2.5rem;
+
+      .counterBox {
+        margin: 0 0.3rem;
+        background-color: rgba(color(primary-white), 0.15);
+        border-radius: 1rem;
+        padding: 1rem 0;
+        min-width: 10rem;
+        .number {
+          span {
+            font-size: text(xl);
+            font-weight: 600;
+            font-family: font(secondary);
+          }
+        }
+        .title {
+          font-size: text(xxs);
+          font-weight: 600;
+          color: rgba(color(primary-white), 0.6);
+        }
+      }
+    }
+  }
+}
+
+.doesWork {
+  padding: 5rem 0;
+}
+
+.aboutMain {
+  padding: 5rem 0;
+  background-color: color(light-gray);
+
+  .aboutBg {
+    position: relative;
+    background-color: color(primary-blue);
+    border-radius: 63% 37% 30% 70% / 50% 45% 55% 50%;
+    padding: 1rem;
+    z-index: 1;
+
+    .circleImg {
+      top: -0.313rem;
+      z-index: -1;
+      left: -0.625rem;
+      position: absolute;
+    }
+
+    .fancyImg {
+      width: 100%;
+      img {
+        border-radius: 63% 37% 30% 70% / 50% 45% 55% 50%;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .dottedImg {
+      bottom: -0.188rem;
+      left: auto;
+      right: -0.188rem;
+      z-index: -1;
+      position: absolute;
+      img {
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+}

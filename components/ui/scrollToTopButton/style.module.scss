@@ -1,0 +1,33 @@
+@import "../../../public/styles/partials/config";
+
+.scrollTop {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: color(primary-pink);
+  color: color(primary-white);
+  z-index: 99;
+  transition: all 0.5s;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: 100%;
+    left: 5%;
+    height: 0.625rem;
+    width: 90%;
+    opacity: 1;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(color(primary-black), 0.25) 0%,
+      rgba(color(primary-black), 0) 80%
+    );
+  }
+}

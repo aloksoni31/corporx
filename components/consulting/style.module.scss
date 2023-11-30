@@ -1,0 +1,24 @@
+@import "../../public/styles/partials/config";
+
+.consultingMain {
+  background-color: color(light-gray);
+  padding: 3rem 0;
+
+  .title {
+    font-size: text(llg);
+    font-family: font(secondary);
+    font-weight: 600;
+  }
+  a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: color(primary-blue);
+    color: color(primary-white);
+    border-radius: 0.3rem;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: color(dark-blue);
+    }
+  }
+}

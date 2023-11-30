@@ -1,0 +1,89 @@
+@import "./partials/config";
+@import "./partials/variables";
+@import "./partials/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: text(normal);
+}
+
+html,
+body {
+  font-size: text(normal);
+  font-family: font(primary);
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+}
+
+/* Remove default table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove default image styles */
+img {
+  display: block;
+}
+
+/* Remove default button and input styles */
+button,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: font(secondary);
+}
+
+.title-heading {
+  font-size: text(xl);
+  font-weight: 600;
+}
+
+.sb-heading {
+  font-size: text(lg);
+  font-weight: 400;
+  font-family: font(secondary);
+}
+
+.icon-primary {
+  background-color: color(primary-blue);
+}
+
+.icon-secondry {
+  background-color: color(primary-pink);
+}
+
+.icon-third {
+  background-color: color(light-blue);
+}
+
+.tabDefault{
+  .react-tabs__tab--selected{
+    &::before{
+      width: 100%;
+      background-color: color(primary-pink);
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@import "../../../public/styles/partials/config";
+
+.headerMain, .scrolled{
+  position: fixed;
+  width: 100%;
+  height: auto;
+  z-index: 99;
+  transition: all 0.3s;
+
+  .headerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      li {
+        list-style-type: none;
+        margin-right: 0.5rem;
+        position: relative;
+
+        &:hover {
+          a {
+            .arrow {
+              border-color: color(accent);
+              transform: rotate(-135deg);
+              position: relative;
+              top: 0.063rem;
+
+              @include mobile {
+                transform: rotate(-45deg);
+                border-color: color(foreground);
+              }
+            }
+          }
+
+          .submenu {
+            display: block;
+            transition: all 0.5s;
+          }
+        }
+
+        .submenu {
+          position: absolute;
+          top: 3.5rem;
+          left: 50%;
+          transform: translate(-50%);
+          width: 100%;
+          min-width: 10rem;
+          flex-wrap: wrap;
+          background-color: color(primary-white);
+          border-radius: 0.3rem;
+          padding: 0.3rem 0;
+          display: none;
+          transition: all 0.3s;
+          a {
+            display: block;
+            width: 100%;
+            color: color(primary-black);
+            padding: 0.3rem 1rem;
+            &:hover {
+              background-color: rgba(color(primary-black), 0.05);
+            }
+          }
+        }
+      }
+      a {
+        color: color(primary-white);
+        font-size: text(xs);
+        padding: 1.3rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        .arrow {
+          box-sizing: border-box;
+          height: 0.4rem;
+          width: 0.4rem;
+          border-style: solid;
+          border-color: white;
+          border-width: 0rem 0.177rem 0.177rem 0rem;
+          transform: rotate(45deg);
+          transition: border-width 150ms ease-in-out;
+          margin-left: 0.5rem;
+          transition: all 0.5s;
+
+          @include mobile {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.scrolled{
+  background-color: color(primary-blue);
+}
