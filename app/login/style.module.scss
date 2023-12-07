@@ -1,0 +1,34 @@
+@import "../../public/styles/partials/config";
+
+.loginMain {
+  background: url("../../public/images/slider-bg-1.svg") no-repeat center bottom /
+    cover;
+  padding: 8rem 2rem;
+  min-height: 100vh;
+
+  .loginForm {
+    width: 100%;
+    max-width: 30%;
+    background-color: color(primary-white);
+    padding: 2rem;
+    border-radius: 0.3rem;
+
+    .formGroup {
+      position: relative;
+      margin-bottom: 1.5rem;
+
+      .viewPass {
+        position: absolute;
+        top: 2.1rem;
+        right: 0.8rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+.thankYou{
+  padding: 10rem 0;
+  text-align: center;
+}

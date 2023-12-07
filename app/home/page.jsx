@@ -6,7 +6,7 @@ import CountUp from "react-countup";
 import PrimaryCard from "@/components/primaryCard";
 import { CustomImage } from "@/components/ui/customImage";
 import CustomTab from "@/components/ui/customTab";
-import Achievement from "@/components/achievement";
+import Achievement from "/components/achievement";
 import styles from "./style.module.scss";
 
 const HomePage = () => {

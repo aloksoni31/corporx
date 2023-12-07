@@ -1,0 +1,17 @@
+@import "../../../public/styles/partials/config";
+
+.primaryBtn{
+    button{
+        background-color: color(primary-pink);
+        padding: 0.5rem 1rem;
+        color: color(primary-white);
+        border-radius: 0.3rem;
+        font-weight: 500;
+        width: 100%;
+
+        &:disabled{
+            pointer-events: none;
+            opacity: 0.1;
+        }
+    }
+}

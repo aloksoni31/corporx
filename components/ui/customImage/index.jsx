@@ -8,7 +8,6 @@ function CustomImage({
   height,
   width,
   alt,
-  layout,
 }) {
   return (
     <div className={`${styles.imgContainerStyle} ${containerStyle}`}>
@@ -18,7 +17,6 @@ function CustomImage({
         height={height}
         alt={alt}
         className={className}
-        layout={layout}
       />
     </div>
   );

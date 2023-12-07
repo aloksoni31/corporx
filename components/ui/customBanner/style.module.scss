@@ -1,0 +1,29 @@
+@import "../../../public/styles/partials/config";
+
+.customBanner {
+  position: relative;
+  background: url("../../../public//images/header-bg-5.jpg") no-repeat;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+
+  .bannerCols {
+    background: linear-gradient(
+      85deg,
+      rgba(color(primary-blue), 0.8) 30%,
+      rgba(color(primary-pink), 0.9) 100%
+    );
+    padding: 10rem 0;
+    color: color(primary-white);
+    ol {
+      list-style: none;
+      li {
+        color: color(primary-white);
+        list-style-type: none;
+        a {
+          color: color(primary-white);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../public/styles/partials/config";
+
+.modalMain {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(color(primary-black), 0.75);
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: all 0.5s;
+
+  .modalContainer {
+    width: 100%;
+    max-width: 30%;
+    background-color: color(primary-white);
+    padding: 5rem 0;
+    position: relative;
+  }
+
+  .closeModal {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../../public/styles/partials/config";
+
+.cardMain{
+    background-color: color(primary-white);
+    box-shadow: 0 0 20px rgba(color(primary-black), 0.1);
+    border-radius: 0.3rem;
+    img{
+        width: 100%;
+        padding: 0.7rem;
+        height: auto;
+        background-color: color(light-gray);
+    }
+    .cardDetails{
+        text-align: center;
+        padding: 1rem 0.5rem;
+        .title{
+            font-size: text(normal);
+            font-weight: 600;
+        }
+        .sbtitle{
+            padding: 1rem 0;
+        }
+        .social{
+            display: flex;
+            justify-content: center;
+            a{
+                margin: 0 0.2rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+
+                &.facebook{
+                    background-color: rgba(color(facebook), 0.15);
+                    color: color(facebook);
+                }
+                &.twitter{
+                    background-color: rgba(color(twitter), 0.15);
+                    color: color(twitter);
+                }
+                &.youtube{
+                    background-color: rgba(color(youtube), 0.15);
+                    color: color(youtube);
+                }
+                &.dribbble{
+                    background-color: rgba(color(doribble), 0.15);
+                    color: color(doribble);
+                }
+            }
+        }
+    }
+}
