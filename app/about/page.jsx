@@ -5,7 +5,6 @@ import CustomBanner from "@/components/ui/customBanner";
 import CustomCard from "@/components/ui/customCard";
 import CustomModal from "@/components/ui/modal";
 import Loader from "@/components/ui/loader";
-
 import styles from "./style.module.scss";
 
 const AboutUs = () => {
