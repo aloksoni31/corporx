@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import CustomBanner from "@/components/ui/customBanner";
 import CustomCard from "@/components/ui/customCard";
 import CustomModal from "@/components/ui/modal";
+import Loader from "@/components/ui/loader";
 
 import styles from "./style.module.scss";
-import Loader from "@/components/ui/loader";
 
 const AboutUs = () => {
   const [showModal, setModal] = useState(false);
