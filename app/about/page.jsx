@@ -45,7 +45,7 @@ const AboutUs = () => {
 
   return (
     <div>
-      <CustomBanner />
+      <CustomBanner title="About Us" pageName="About Us" />
 
       <section className={styles.aboutUs}>
         <div className="container">

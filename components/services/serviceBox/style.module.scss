@@ -1,0 +1,17 @@
+@import "../../../public/styles/partials/config";
+
+.serviceCols {
+  button {
+    width: 100%;
+    border-radius: 0.3rem;
+    min-height: 15rem;
+    margin-bottom: 1.5rem;
+    padding: 2rem 0;
+    color: color(primary-white);
+    h2 {
+      font-size: text(lg);
+      font-weight: 600;
+      margin: 0.5rem 0;
+    }
+  }
+}
