@@ -11,6 +11,7 @@ import {
   FaGooglePlay,
   FaWindows,
 } from "react-icons/fa";
+import { Icons } from "@/components/icons";
 import CustomBanner from "@/components/ui/customBanner";
 import ServiceDescription from "@/components/services/serviceDescription";
 import ServiceBox from "@/components/services/serviceBox";
@@ -37,6 +38,29 @@ const Services = () => {
       appName: "Windows",
       icon: <FaWindows size={30} />,
       applink: "https://apps.microsoft.com/home?hl=en-US&gl=US",
+    },
+  ];
+
+  const serviceData = [
+    {
+      icon: <Icons.announcement width={100} height={100} />,
+      title: "Marketing Services",
+      text: 'Progressively empower business "outside the box" thinking with resource-leveling partnerships.',
+    },
+    {
+      icon: <Icons.bulb width={100} height={100} />,
+      title: "Web App Development",
+      text: 'Quickly pontificate holistic e-commerce rather than goal web-readiness enhance inexpensive.',
+    },
+    {
+      icon: <Icons.headphone width={100} height={100} />,
+      title: "24/7 Call Center Service",
+      text: 'Authoritatively reinvent multimedia based niches with global portals orchestrate client-centered.',
+    },
+    {
+      icon: <Icons.bell width={100} height={100} />,
+      title: "Social Media Marketing",
+      text: 'Assertively leverage other standardized e-services with fully tested e-commerce synergistic.',
     },
   ];
   return (
@@ -134,6 +158,34 @@ const Services = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.weProvideMain}>
+        <div className="container">
+          <h1 className="title-heading text-center">
+            We Provide Quality Services
+          </h1>
+          <p className="sb-heading text-center col-md-8 m-auto">
+            Efficiently aggregate end-to-end core competencies without
+            maintainable. Dynamically foster tactical solutions without enabled
+            value.
+          </p>
+
+          <div className="row mt-5">
+            {serviceData.map((item, key) => (
+              <div className="col-md-6" key={key}>
+                <div className={styles.provideBox}>
+                  <div className={styles.icon}>{item.icon}</div>
+                  <div className={styles.details}>
+                    <h3 className={styles.title}>{item.title}</h3>
+                    <p>{item.text}</p>
+                    <Link href="/">Read More</Link>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

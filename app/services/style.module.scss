@@ -1,7 +1,7 @@
 @import "../../public/styles/partials/config";
 
 .serviceMain {
-  padding: 6rem 0;
+  padding: 6rem 0 0;
 
   .serviceFlex {
     display: flex;
@@ -84,6 +84,22 @@
           }
         }
       }
+    }
+  }
+}
+
+.weProvideMain {
+  padding: 6rem 0;
+  background-color: rgba(color(primary-black), 0.03);
+  .provideBox {
+    display: flex;
+    background-color: color(primary-white);
+    padding: 2rem;
+    svg {
+      color: color(primary-pink);
+    }
+    a {
+      color: rgba(color(primary-black), 0.8);
     }
   }
 }
