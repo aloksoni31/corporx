@@ -47,6 +47,10 @@
     h1 {
       font-size: text(h1-heading);
       font-weight: 700;
+
+      @include tablet{
+        font-size: text(xl);
+      }
     }
     p {
       font-size: text(lg);
@@ -58,6 +62,11 @@
       justify-content: center;
       align-items: center;
       margin-top: 2.5rem;
+
+      @include tablet{
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
 
       .counterBox {
         margin: 0 0.3rem;

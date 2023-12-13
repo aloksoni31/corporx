@@ -1,11 +1,15 @@
 "use client";
-
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./style.module.scss";
 import { CustomImage } from "@/components/ui/customImage";
 import Link from "next/link";
 
 const Header = () => {
+  const [isActive, setActive] = useState(false);
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
+
   const [scrolled, setScrolled] = React.useState(false);
 
   const handleScroll = () => {
@@ -36,7 +40,7 @@ const Header = () => {
               />
             </Link>
           </div>
-          <nav>
+          <nav className={isActive ? styles.showNav : null}>
             <ul>
               <li>
                 <Link href="/">
@@ -77,6 +81,11 @@ const Header = () => {
               </li>
             </ul>
           </nav>
+          <div className={isActive ? styles.activeHumburger : null}>
+            <button className={styles.navHamburger} onClick={toggleClass}>
+              <span></span>
+            </button>
+          </div>
         </div>
       </div>
     </header>

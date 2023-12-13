@@ -1,6 +1,7 @@
 @import "../../../public/styles/partials/config";
 
-.headerMain, .scrolled{
+.headerMain,
+.scrolled {
   position: fixed;
   width: 100%;
   height: auto;
@@ -11,19 +12,45 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    padding: 0.8rem 0;
   }
 
   nav {
+    @include tablet {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: color(primary-pink);
+      left: -100%;
+      top: 0;
+      z-index: 9;
+      transition: all 0.5s;
+    }
+
+    &.showNav{
+      left: 0;
+    }
+
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
       display: flex;
       align-items: center;
+
+      @include tablet {
+        flex-wrap: wrap;
+      }
+
       li {
         list-style-type: none;
         margin-right: 0.5rem;
         position: relative;
+
+        @include tablet {
+          width: 100%;
+        }
 
         &:hover {
           a {
@@ -78,6 +105,10 @@
         justify-content: space-between;
         align-items: center;
         text-decoration: none;
+
+        @include tablet {
+          justify-content: flex-start;
+        }
         .arrow {
           box-sizing: border-box;
           height: 0.4rem;
@@ -97,8 +128,83 @@
       }
     }
   }
+
+  .activeHumburger {
+    button {
+      span {
+        background: 0;
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+        &::after {
+          bottom: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .navHamburger {
+    display: none;
+
+    @include tablet {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 1.5625rem;
+      height: 2.8125rem;
+      font-size: 0;
+      text-indent: -9999px;
+      appearance: none;
+      box-shadow: none;
+      border-radius: none;
+      cursor: pointer;
+      background: 0;
+      margin-left: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 99;
+
+      span {
+        display: block;
+        position: absolute;
+        top: 1.4375rem;
+        left: 0;
+        right: 0;
+        height: 0.125rem;
+        background: #fff;
+
+        &::before,
+        &::after {
+          position: absolute;
+          display: block;
+          left: 0;
+          width: 100%;
+          height: 0.125rem;
+          background-color: #fff;
+          content: "";
+          transition-delay: 0.3s, 0;
+        }
+
+        &::before {
+          top: -0.5rem;
+          transition-property: top;
+          transition: 0.3s all;
+        }
+        &::after {
+          bottom: -0.5rem;
+          transition-property: bottom;
+          transition: 0.3s all;
+        }
+      }
+    }
+  }
 }
 
-.scrolled{
+.scrolled {
   background-color: color(primary-blue);
 }
